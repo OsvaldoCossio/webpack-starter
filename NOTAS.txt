@@ -209,6 +209,62 @@ setup>>webpack
 }
 - npm run build, para ver la generacion del codigo. Main de dist ya no tiene const; sino var en la definicion de la variable nombre (inicializado con "osvaldo").
 - npm run build:dev, para ejecutar con la configuracion que no usa babel.
+100
+Configuracion de Git en nuestro equipo
+https://desktop.github.com/
+descargar: http://git-scm.com/
+- Ver si ya esta instalado. git --version (git CMD, ubicarse en el direcctorio de trabajo)
+git config --global user.name "Osvaldo"
+git config --global user.email "osvaldocosipo@hotmail.com"
+git config --global color.ui auto
+git init 
+Crear archivo .gitignore
+Llenar con: 
+node_modules/
+
+dist/
+Ignorar las carpetas: node_modules, dist porque se pueden generar
+Sacar una foto
+git add .
+git commit -m "Primer commit"
+Recuperar cambios
+git checkout -- .
+101
+Desplegar el proyecto a Github
+github.com
+osvaldocosipo@hotmail.com
+supernova4250788
+OsvaldoCossio
+
+- Crear un nuevo repositorio, colocar nombre (webpack-starter), descripcion(Este es un cascaron para aplicaciones con webpack), private. Click sobre Create repository
+ver historial (git CMD): git log
+- Añadir origen remoto: git remote add origin https://github.com/OsvaldoCossio/webpack-starter.git
+- git push -u origin main
+- Proveer credenciales
+- Recargar github.com. 
+- En el visual studio code añadir archivo: README.md
+- Para editar correctamente: view>>Command Palette>>Mark down: Open Preview
+- Escribir en README.md:
+# Webpack Starter
+Este es el proyecto inicial para crear aplicaciones utilizando webpack
+
+### Notas:
+Recuerden reconstruir los modulos de Node
+
+```
+npm install
+```
+Y para reconstruir el build, recuerden:
+```
+npm run build
+```
+- Subir el README.md:
+git add .
+commit -m "Readme creado"
+git push
+- Recargar github.com
+
+
 
 
 
